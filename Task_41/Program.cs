@@ -30,7 +30,7 @@ int ZeroCounter(int [] array)
 	int count = 0;
 	foreach(int el in array)
 	{
-		if(el == 0) count++; 
+		if(el > 0) count++; 
 	}
 	return count;
 }
@@ -43,4 +43,4 @@ int length = int.Parse(Console.ReadLine() ?? "0");
 int [] newArray = GetArray(length);
 PrintArray(newArray);
 int counter = ZeroCounter(newArray);
-Console.Write($"Numbers of zeros in the array: {counter}");
+Console.Write($"Positive numbers in the array: {counter}");
